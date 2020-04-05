@@ -7,21 +7,28 @@
       <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
   </head>
   <body>
-      <header>
+      <header id="head" class="myStyle">
       <img class="title" alt="Typing Test" src="images/headerpic-svg.svg"/>
       </header>
-      <p class="instr">Instructions: Words will appear for you to type. After typing each word, press "Enter". The timer will begin when you start typing.</p>
+      <p id="instr">Instructions: Words will appear for you to type. After typing each word, press "Enter". The timer will begin when you start typing.</p>
 <!-- countdown timer html -->
-      <div class="timer">
-
+      <div>
+        <span id="timer"></span>
+        <br>
+        <button type="button" id="testbutt">change header color!</button>
+        <button type="button" id="optimism">start timer</button>
       </div>
+
 <!-- random word generator html -->
       <div class="words">
 
       </div>
 <!-- user input -->
       <div>
-        
+
       </div>
+      <footer>
+        <script src="wpm.js"></script>
+      </footer>
   </body>
 </html>

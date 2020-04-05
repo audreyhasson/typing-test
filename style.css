@@ -9,6 +9,9 @@ header img {
   justify-content: center;
 }
 
+.myStyle {
+  background-color: black;
+}
 body {
   width: 1000px;
   margin: auto;
