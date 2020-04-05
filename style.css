@@ -1,0 +1,17 @@
+/*wpm styling*/
+
+/* header */
+header img {
+  width: 450px;
+  margin: auto;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+body {
+  width: 1000px;
+  margin: auto;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 18px;
+}
