@@ -1,5 +1,7 @@
 /*wpm styling*/
-
+.blue-color {
+  color: #82b1bd;
+}
 /* header */
 header img {
   width: 450px;
@@ -12,9 +14,44 @@ header img {
 .myStyle {
   background-color: black;
 }
+hr {
+  border: 2px solid #82b1bd;
+  margin-top: -30px;
+}
 body {
-  width: 1000px;
   margin: auto;
   font-family: 'Titillium Web', sans-serif;
   font-size: 18px;
+  text-align: center;
+}
+
+.main-container {
+  width: 1000px;
+  margin: auto;
+}
+
+/* timer */
+#timer {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+#optimism {
+  display: none;
+}
+
+/* input */
+input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 2px #82b1bd;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 24px;
+}
+
+input:focus {
+  outline: 0;
 }
