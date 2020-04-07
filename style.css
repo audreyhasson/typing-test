@@ -3,6 +3,10 @@
   color: #82b1bd;
 }
 /* header */
+header {
+  background-color: #fff;
+}
+
 header img {
   width: 450px;
   margin: auto;
@@ -28,6 +32,8 @@ body {
 .main-container {
   width: 1000px;
   margin: auto;
+  background-color: #fff;
+  height: 500px;
 }
 
 /* timer */
@@ -39,6 +45,21 @@ body {
 }
 #optimism {
   display: none;
+}
+
+/* random words */
+.words {
+  width: 500px;
+  background-color: #82b1bd;
+  height: 40px;
+  margin: auto;
+}
+
+#r-words {
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  margin: auto;
 }
 
 /* input */
