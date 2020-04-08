@@ -77,3 +77,14 @@ input {
 input:focus {
   outline: 0;
 }
+
+/* results */
+.hideme {
+  display: none;
+}
+
+.results {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
