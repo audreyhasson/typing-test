@@ -25,7 +25,7 @@ function myWords() {
   var theySee = words.slice(start,end).join(" ");
   document.getElementById("r-words").innerHTML = theySee
   document.body.onkeydown = function() {
-    if(event.keyCode === 32 || event.keyCode === 'Spacebar') {
+    if(event.keyCode === 32 || event.keyCode === 'Spacebar' || event.keyCode === 62) {
       let firstword = start;
       var forChecking = " " + words[firstword];
         if (words[firstword] === "off") {
