@@ -6,7 +6,7 @@ document.getElementById("timer").innerHTML = seconds.toFixed(2);
 
 
 // most dangerous game
-var words = ['practice', 'off', 'there', 'to', 'the', 'right', 'somewhere', 'is', 'a', 'large', 'island', 'said', 'Whitney.', 'It', 'is', 'rather', 'a', 'mystery.', 'What', 'island', 'is', 'it?', 'Rainsford', 'asked.', 'The', 'old', 'charts', 'call', 'it', 'Ship', 'Trap', 'Island,', 'Whitney', 'replied.', 'A', 'suggestive', 'name', 'is', 'it', 'not?', 'Sailors', 'have', 'a', 'curious', 'dread', 'of', 'the', 'place.', 'I', 'do', 'not', 'know', 'why.', 'Some', 'superstition.', 'Cannot', 'see', 'it.', 'remarked', 'Rainsford', 'trying', 'to', 'peer', 'through', 'the', 'dank', 'tropical', 'night', 'that', 'was', 'palpable', 'as', 'it', 'pressed', 'its', 'thick', 'warm', 'blackness', 'in', 'upon', 'the', 'yacht.',
+var words = ['off', 'there', 'to', 'the', 'right', 'somewhere', 'is', 'a', 'large', 'island', 'said', 'Whitney.', 'It', 'is', 'rather', 'a', 'mystery.', 'What', 'island', 'is', 'it?', 'Rainsford', 'asked.', 'The', 'old', 'charts', 'call', 'it', 'Ship', 'Trap', 'Island,', 'Whitney', 'replied.', 'A', 'suggestive', 'name', 'is', 'it', 'not?', 'Sailors', 'have', 'a', 'curious', 'dread', 'of', 'the', 'place.', 'I', 'do', 'not', 'know', 'why.', 'Some', 'superstition.', 'Cannot', 'see', 'it.', 'remarked', 'Rainsford', 'trying', 'to', 'peer', 'through', 'the', 'dank', 'tropical', 'night', 'that', 'was', 'palpable', 'as', 'it', 'pressed', 'its', 'thick', 'warm', 'blackness', 'in', 'upon', 'the', 'yacht.',
 'You', 'have', 'good', 'eyes.', 'said', 'Whitney','with', 'a', 'laugh', 'and', 'I', 'have', 'seen', 'you','pick', 'off', 'a', 'moose', 'moving', 'in', 'the', 'brown','fall', 'bush', 'at', 'four', 'hundred', 'yards', 'but', 'even','you', 'can', 'not', 'see', 'four', 'miles', 'or', 'so', 'through','a', 'moonless', 'Caribbean', 'night.', 'Nor', 'four', 'yards', 'admitted', 'Rainsford.', 'Ugh!', 'It', 'is', 'like', 'moist', 'black', 'velvet.', 'It', 'will', 'be', 'light', 'enough', 'in', 'Rio',
 'promised', 'Whitney.', 'We', 'should', 'make', 'it', 'in', 'a', 'few', 'days.', 'I', 'hope', 'the', 'jaguar', 'guns', 'have', 'come', 'from', 'Purdey.', 'We', 'should', 'have', 'some', 'good', 'hunting', 'up', 'the', 'Amazon.', 'Great', 'sport', 'hunting.', 'The', 'best', 'sport', 'in', 'the', 'world', 'agreed', 'Rainsford.', 'For', 'the', 'hunter', 'amended', 'Whitney.', 'Not', 'for', 'the', 'jaguar.', 'Do', 'not', 'talk', 'rot', 'Whitney', 'said', 'Rainsford', 'You', 'are', 'a',
 'big','game', 'hunter,', 'not', 'a', 'philosopher.', 'Who', 'cares', 'how', 'a', 'jaguar', 'feels?', 'Perhaps', 'the', 'jaguar', 'does.', 'observed', 'Whitney.', 'Bah!', 'They', 'have', 'no', 'understanding.',
@@ -18,6 +18,7 @@ document.getElementById("r-words").innerHTML = theySee
 let clear = "";
 let correctWords = [];
 let mispelledWords = [];
+
 function myWords() {
   let start = 0;
   let end = 5;
@@ -27,17 +28,8 @@ function myWords() {
     if(event.keyCode === 32 || event.keyCode === 'Spacebar') {
       let firstword = start;
       var forChecking = " " + words[firstword];
-        if (words[firstword] === "practice") {
-          var forChecking = "practice";
-            setInterval(function (){
-                if (seconds===-0.009999999996633669) {
-                  document.getElementById("timer").innerHTML = "done!";
-                }
-                else if (seconds>0) {
-                seconds = seconds - .01;
-                document.getElementById("timer").innerHTML = seconds.toFixed(2);
-              }
-            }, .001);
+        if (words[firstword] === "off") {
+          var forChecking = "off";
         }
       start = start + 1;
       end = end + 1;
@@ -51,8 +43,6 @@ function myWords() {
         if (forChecking !== theirWord) {
           mispelledWords.push(theirWord);
         }
-        console.log(correctWords);
-        console.log(mispelledWords);
     }
     else {
       var theySee = words.slice(start,end).join(" ");
@@ -61,15 +51,53 @@ function myWords() {
 }
 }
 
-//to get the words to change based on user input
+
 document.getElementById("textbox").onfocus = myWords();
+document.getElementById("textbox").onfocus = function(){
+  setTimeout(ready, 1000);
+  setTimeout(set, 2000);
+  setTimeout(go, 3000);
+  setTimeout (function(){
+    setInterval(function (){
+      if (seconds===-0.009999999996633669) {
+        document.getElementById("timer").innerHTML = "done!";
+      }
+      else if (seconds>0) {
+        seconds = seconds - .01;
+        document.getElementById("timer").innerHTML = seconds.toFixed(2);
+      }
+    }, 10);
+  }, 3000);
+  setTimeout(myResults, 63000);
+}
+
+function ready() {
+  document.getElementById("textbox").setAttribute("placeholder", "ready");
+}
+
+function set(){
+  document.getElementById("textbox").setAttribute("placeholder", "set");
+}
+
+function go() {
+  document.getElementById("textbox").setAttribute("placeholder", "go!");
+}
+
 //lists of words spelled right and wrong
 
-var totalWords = correctWords.length + mispelledWords.length;
-var accuracy = correctWords.length/totalWords;
 
+
+
+function myResults() {
+  let totalWords = correctWords.length + mispelledWords.length;
+  let accuracy = ((correctWords.length/totalWords)*100).toFixed(0);
+  console.log("You typed " + totalWords + " WPM!");
+  console.log("Your accuracy was " + accuracy + "%!");
+}
+/*
 function showResults() {
   if (document.getElementById("timer") === "done!") {
     document.getElementById("someshow").classList.remove("hideme");
   }
 }
+*/
