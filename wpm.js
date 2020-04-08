@@ -60,7 +60,7 @@ document.getElementById("textbox").onfocus = function(){
   setTimeout (function(){
     setInterval(function (){
       if (seconds===-0.009999999996633669) {
-        document.getElementById("timer").innerHTML = "done!";
+        document.getElementById("timer").innerHTML = "00.00";
       }
       else if (seconds>0) {
         seconds = seconds - .01;
@@ -85,14 +85,12 @@ function go() {
 
 //lists of words spelled right and wrong
 
-
-
-
 function myResults() {
   let totalWords = correctWords.length + mispelledWords.length;
   let accuracy = ((correctWords.length/totalWords)*100).toFixed(0);
-  console.log("You typed " + totalWords + " WPM!");
-  console.log("Your accuracy was " + accuracy + "%!");
+  let resultsString = "You typed " + totalWords + " WPM! Your accuracy was " + accuracy + "%!";
+  document.getElementById("results-p").innerHTML = resultsString;
+  document.getElementById("retry").classList.remove("hideme")
 }
 /*
 function showResults() {

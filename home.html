@@ -9,14 +9,16 @@
   </head>
   <body>
       <header id="head">
-      <img class="title" alt="Typing Test" src="images/headerpic-svg.svg"/>
+        <div class= title>
+          <p>typing test</p>
+        </div>
     <hr>
       </header>
 <!-- main -->
     <div class="main-container"><br>
       <p id="instr">Instructions: Type the words you see. The timer will begin when you see the word "go!"</p>
 <!-- countdown timer html -->
-      <div>
+      <div class= "t-class">
         <span id="timer"></span>
         <br>
         <button type="button" id="optimism">start timer</button>
@@ -28,13 +30,13 @@
 <!-- user input -->
       <div>
         <br>
-      <input type="text" size="40" placeholder="start typing here" id="textbox"></input>
+      <input type="text" placeholder="start typing here" id="textbox"></input>
       </div>
 
       <div class="results" >
-        <p id="someshow"></p>
+        <p id="results-p"></p>
       </div>
-
+      <a href="javascript:window.location.href=window.location.href" class="play-again hideme" id="retry">play again!</a>
     </div>
       <footer>
         <script src="wpm.js"></script>
