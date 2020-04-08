@@ -52,6 +52,8 @@ function myWords() {
 }
 
 
+
+
 document.getElementById("textbox").onfocus = myWords();
 document.getElementById("textbox").onfocus = function(){
   setTimeout(ready, 1000);
@@ -90,7 +92,8 @@ function myResults() {
   let accuracy = ((correctWords.length/totalWords)*100).toFixed(0);
   let resultsString = "You typed " + totalWords + " WPM! Your accuracy was " + accuracy + "%!";
   document.getElementById("results-p").innerHTML = resultsString;
-  document.getElementById("retry").classList.remove("hideme")
+  document.getElementById("retry").classList.remove("hideme");
+  document.getElementById("tohide").classList.add("hideme");
 }
 /*
 function showResults() {

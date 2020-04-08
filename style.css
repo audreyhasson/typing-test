@@ -38,7 +38,7 @@ body {
 }
 
 .main-container {
-  width: 1000px;
+  width: 700px;
   margin: auto;
   background-color: #fff;
   height: 500px;
@@ -50,6 +50,7 @@ body {
   display: flex;
   justify-content: center;
   font-size: 40px;
+  padding-bottom: 20px;
 }
 #optimism {
   display: none;
@@ -57,18 +58,23 @@ body {
 
 /* random words */
 .words {
-  width: 500px;
+  width: 400px;
   background-color: #82b1bd;
   height: 40px;
   margin: auto;
+  display: flex;
 }
 
 #r-words {
+  display: inline-block;
   line-height: 40px;
   color: #fff;
-  text-align: center;
+  text-align: left;
   margin: auto;
   font-size: 24px;
+  width: 300px;
+  padding-left: 100px;
+  padding-right: 0px;
 }
 
 /* input */
@@ -107,7 +113,7 @@ input:focus {
 
 /* mobile version */
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 800px) {
   html {
     display: table;
     margin: auto;

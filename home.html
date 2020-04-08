@@ -16,13 +16,12 @@
       </header>
 <!-- main -->
     <div class="main-container"><br>
-      <p id="instr">Instructions: Type the words you see. The timer will begin when you see the word "go!"</p>
+      <p id="instr">Instructions: Type the words you see. Capitalization and punctuation count. The timer will begin when you see the word "go!"</p>
 <!-- countdown timer html -->
       <div class= "t-class">
         <span id="timer"></span>
-        <br>
-        <button type="button" id="optimism">start timer</button>
       </div>
+      <div id="tohide">
 <!-- random word generator html -->
       <div class="words">
         <span id="r-words"></span>
@@ -32,11 +31,13 @@
         <br>
       <input type="text" placeholder="start typing here" id="textbox"></input>
       </div>
-
+    </div>
       <div class="results" >
         <p id="results-p"></p>
       </div>
       <a href="javascript:window.location.href=window.location.href" class="play-again hideme" id="retry">play again!</a>
+      <p id="practice"></p>
+
     </div>
       <footer>
         <script src="wpm.js"></script>
